@@ -1,0 +1,12 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}nombre de visite{% endblock %}
+
+{% block body %}
+c' est votre
+    {%if (nbr == 1)%}
+    1 er visite
+    {%else%}
+    {{nbr}} eme vistes
+    {%endif%}
+{% endblock %}

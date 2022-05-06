@@ -1,0 +1,23 @@
+
+{% extends 'layout.html.twig' %}
+
+{% block title %}etudient's List{% endblock %}
+
+{% block body %}
+    <table class="table">
+        <th>id</th>
+        <th>nom</th>
+        <th>prenom</th>
+        <th>section</th>
+        <th>action</th>
+        {% for item in data %}
+            <tr >
+                <td>{{item.id}}</td>
+                <td>{{item.nom}}</td>
+                <td>{{item.pernom}}</td>
+                <td>{%if item.section == null %} etudient non affecté a une section {%else%} {{item.section}} {%endif%}</td>
+            <td><a href="{{ path('app_delete', {id: item.id}) }}">Delete</a> ou <a href="{{ path('edit', {id: item.id}) }}">Update</a> </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
