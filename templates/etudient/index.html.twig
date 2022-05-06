@@ -12,16 +12,17 @@
         <th>action</th>
         {% for item in data %}
             {%if loop.index % 2 ==1 %}
-            <tr  class="table-primary">
+            <tr  class="table-primary" onclick="change(this,'table-primary')">
                 {%else%}
-                    <tr  class="table-secondary">
+                    <tr  class="table-secondary" onclick="change(this,'table-secondary')">
                 {%endif%}
-                <td>{{item.id}}</td>
-                <td>{{item.nom}}</td>
-                <td>{{item.pernom}}</td>
-                <td>{%if item.section == null %} etudient non affecté a une section {%else%} {{item.section}} {%endif%}</td>
-            <td><a href="{{ path('app_delete', {id: item.id}) }}">Delete</a> ou <a href="{{ path('edit', {id: item.id}) }}">Update</a> </td>
+                <td >{{item.id}}</td>
+                <td >{{item.nom}}</td>
+                <td >{{item.pernom}}</td>
+                <td >{%if item.section == null %} etudient non affecté a une section {%else%} {{item.section}} {%endif%}</td>
+            <td><a href="{{ path('app_delete', {id: item.id}) }}">Delete</a>    <a href="{{ path('edit', {id: item.id}) }}">Edit</a> </td>
             </tr>
         {% endfor %}
     </table>
+
 {% endblock %}
