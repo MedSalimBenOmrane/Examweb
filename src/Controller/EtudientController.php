@@ -57,7 +57,7 @@ class EtudientController extends AbstractController
 
 #[Route('/etudient/edit/{id}', name: 'edit')]
 
-#[Route('etudient/edit/{id?0}', name: 'app_etudient_edit')]
+
 public function edit(Request $request, Etudient $etudient = null): Response
 {
     if (!$etudient) {

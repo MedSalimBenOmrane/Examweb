@@ -11,7 +11,11 @@
         <th>section</th>
         <th>action</th>
         {% for item in data %}
-            <tr >
+            {%if loop.index % 2 ==1 %}
+            <tr  class="table-primary">
+                {%else%}
+                    <tr  class="table-secondary">
+                {%endif%}
                 <td>{{item.id}}</td>
                 <td>{{item.nom}}</td>
                 <td>{{item.pernom}}</td>
