@@ -3,10 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\Etudient;
-use App\Entity\Person;
-use App\Entity\Voiture;
+
 use App\Form\EtudientType;
-use App\Form\VoitureType;
+
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
